@@ -4,7 +4,7 @@ import { RootStackParamList } from "./routes";
 import { Home } from "./screens/Home";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Details } from "./screens/Details";
+import { GestureExample } from "./screens/GestureExample";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -18,7 +18,7 @@ const AppNavigator = () => (
       component={Home}
       options={{ title: "Animation examples" }}
     />
-    <Stack.Screen name="Details" component={Details} />
+    <Stack.Screen name="GestureExample" component={GestureExample} />
   </Stack.Navigator>
 );
 
