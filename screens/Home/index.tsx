@@ -7,17 +7,20 @@ import { styles } from "./index.styles";
 type HomeProps = NativeStackScreenProps<RootStackParamList, "Home">;
 
 export const Home: React.FC<HomeProps> = ({ navigation }) => {
-  const handlePress = () => {
-    navigation.push("GestureExample");
-  };
   return (
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
       <Text>You are home!</Text>
       <TouchableOpacity
         style={{ padding: 15, backgroundColor: "lightblue", marginTop: 20 }}
-        onPress={handlePress}
+        onPress={() => navigation.push("GestureExample")}
       >
         <Text>View Gesture Example</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={{ padding: 15, backgroundColor: "lightblue", marginTop: 20 }}
+        onPress={() => navigation.push("StateExample")}
+      >
+        <Text>View State Example</Text>
       </TouchableOpacity>
     </View>
   );

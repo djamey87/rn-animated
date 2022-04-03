@@ -7,6 +7,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { GestureExample } from "./screens/GestureExample";
 import { enableScreens } from "react-native-screens";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { StateExample } from "./screens/StateExample";
 
 enableScreens();
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -22,6 +23,7 @@ const AppNavigator = () => (
       options={{ title: "Animation examples" }}
     />
     <Stack.Screen name="GestureExample" component={GestureExample} />
+    <Stack.Screen name="StateExample" component={StateExample} />
   </Stack.Navigator>
 );
 
