@@ -1,8 +1,8 @@
 import { ViewStyle, StyleSheet, Dimensions } from "react-native";
 
 const container: ViewStyle = {
-  ...StyleSheet.absoluteFillObject,
   alignItems: "center",
+  flex: 1,
 };
 
 export const styles = {

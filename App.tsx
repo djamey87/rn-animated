@@ -5,7 +5,10 @@ import { Home } from "./screens/Home";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { GestureExample } from "./screens/GestureExample";
+import { enableScreens } from "react-native-screens";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
+enableScreens();
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const AppNavigator = () => (
@@ -26,7 +29,9 @@ export default function App() {
   return (
     <NavigationContainer>
       <StatusBar barStyle="light-content" />
-      <AppNavigator />
+      <GestureHandlerRootView style={{ flex: 1 }}>
+        <AppNavigator />
+      </GestureHandlerRootView>
     </NavigationContainer>
   );
 }
